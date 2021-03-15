@@ -1,28 +1,30 @@
 import React from 'react'
 import Button from './Button';
-import Produto from './Produto'
+import Usuario from './Usuario';
 
 const App = () => {
-const [dados, setDados] = React.useState(null)
-const [loading, setLoading] = React.useState(false)
+  const [dados, setDados] = React.useState(null)
+  const [loading, setLoading] = React.useState(null)
 
-async function handleClick(event) {
-  setLoading(true)
-  const response = await fetch(
-    `https://ranekapi.origamid.dev/json/api/produto/${event.target.innerText}`)
-  
-  const json = await response.json()
-  setDados(json)
-  console.log(dados)
-  setLoading(false)
-}
+  async function handleClick(event) {
+    setLoading(true)
+
+    const response = await fetch(`
+    https://api.github.com/users/${event.target.innerText}`)
+
+    const resJson = await response.json()
+    setDados(resJson)
+
+    setLoading(false)
+  }
   return (
     <div>
-      <Button onClick={handleClick} text="notebook" />
-      <Button onClick={handleClick} text="smartphone" />
-      <Button onClick={handleClick} text="tablet" />
+      <Button onClick={handleClick} user="wanderson1873" />
+      <Button onClick={handleClick} user="diego3g" />
+
       <p>{loading && 'Carregando...'}</p>
-      {!loading && dados && <Produto dados={dados}/>}
+      
+      {!loading && dados && <Usuario dados={dados} />}
     </div>
   );
 }
