@@ -4,7 +4,8 @@ function Header() {
    return (
       <header>
          <ul>
-            <li><a href="/">Menu</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu">Menu</a></li>
             <li><a href="/bebidas">Bebidas</a></li>
          </ul>
       </header>

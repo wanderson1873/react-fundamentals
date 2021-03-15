@@ -1,4 +1,5 @@
 import React from 'react'
+import Title from './Title'
 
 const menus = [
    { 
@@ -18,29 +19,20 @@ const menus = [
          },
       ]
    },
-   { 
-      title: "Vinho Tinto",
-      items: [
-         { 
-            name: "Rola",
-            price: "10"
-         },
-         { 
-            name: "Periquita",
-            price: "15"
-         },
-         { 
-            name: "Esporão",
-            price: "17"
-         },
-      ]
-   }
-   
 ]
 function Menu() {
    return (
       <div>
-         
+            {menus.map((menu) => (
+               <div key={menu.title}>
+                  <Title text={menu.title} />
+                  <ul>
+                     {menu.items.map((item) => (
+                        <li key={item.name}>{item.name} €{item.price},00</li>
+                     ))}
+                  </ul>
+               </div>
+            ))}
       </div>
    )
 }
