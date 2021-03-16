@@ -1,30 +1,26 @@
 import React from 'react'
-import Button from './Button';
-import Usuario from './Usuario';
+import Produto from './Produto'
 
 const App = () => {
-  const [dados, setDados] = React.useState(null)
-  const [loading, setLoading] = React.useState(null)
+  const [produto, setProduto] = React.useState(null)
 
-  async function handleClick(event) {
-    setLoading(true)
+  React.useEffect(() => {
+    const produtoLocal = window.localStorage.getItem('produto')
+    if(produtoLocal !== 'null') setProduto(produtoLocal)
+  }, [])
 
-    const response = await fetch(`
-    https://api.github.com/users/${event.target.innerText}`)
-
-    const resJson = await response.json()
-    setDados(resJson)
-
-    setLoading(false)
+  React.useEffect(() => {
+    if(produto !== null) window.localStorage.setItem('produto', produto)
+  }, [produto])
+  function handleClick({target}) {
+      setProduto(target.innerText)
   }
   return (
     <div>
-      <Button onClick={handleClick} user="wanderson1873" />
-      <Button onClick={handleClick} user="diego3g" />
-
-      <p>{loading && 'Carregando...'}</p>
-      
-      {!loading && dados && <Usuario dados={dados} />}
+      <h1>Preferencia: {produto}</h1>
+      <button style={{margin: '0.5em'}} onClick={handleClick}i>notebook</button>
+      <button style={{margin: '0.5em'}} onClick={handleClick}i>tablet</button>
+      <Produto produto={produto}/>
     </div>
   );
 }
