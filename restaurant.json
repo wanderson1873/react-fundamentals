@@ -1,0 +1,112 @@
+{
+   "menuTitle": "Menu",
+   "subTitle": "",
+   "menuItems": [
+
+   ],
+   "menuTitle": "Bebidas",
+   "subTitle": "",
+   "menuTitle": [
+
+   ],
+   "menuTitle": "Sobremesas",
+   "subTitle": "",
+   "menuItems": [
+      {
+         "title": "Doces",
+         "items": [
+            {
+               "name": "Doce da Casa",
+               "description": "",
+               "price": 330
+            },
+            {
+               "name": "Mousse de Chocolate",
+               "description": "",
+               "price": 350
+            },
+            {
+               "name": "Mousse de Maracujá",
+               "description": "",
+               "price": 350
+            },
+            {
+               "name": "Torta de Laranja de Setúbal",
+               "description": "",
+               "price": 350
+            },
+            {
+               "name": "Petit Gateau com Gelado",
+               "description": "",
+               "price": 390
+            },
+            {
+               "name": "Doce da Lata",
+               "description": "Alfarroba, Lemon Curd e Suspiro",
+               "price": 400
+            },
+            {
+               "name": "Cheesecake",
+               "description": "Sabores Diversos",
+               "price": 350
+            },
+            {
+               "name": "Tarte de lima no Pote",
+               "description": "",
+               "price": 350
+            },
+            {
+               "name": "Pavlova de Laranja",
+               "description": "",
+               "price": 400
+            },
+            {
+               "name": "Häagen-Dazs 95ml",
+               "description": "Sabores Diversos",
+               "price": 380
+            }
+         ]
+      },
+      {
+         "title": "Frutas",
+         "items": [
+            {
+               "name": "Banana",
+               "description": "",
+               "price": 150
+            },
+            {
+               "name": "Kiwi",
+               "description": "",
+               "price": 150
+            },
+            {
+               "name": "Laranja",
+               "description": "",
+               "price": 150
+            },
+            {
+               "name": "Morangos",
+               "description": "",
+               "price": 250
+            },
+            {
+               "name": "Manga",
+               "description": "",
+               "price": 300
+            },
+            {
+               "name": "Abacaxi",
+               "description": "",
+               "price": 250
+            },
+            {
+               "name": "Salada de Frutas",
+               "description": "",
+               "price": 350
+            }
+         ]
+      }
+   ]
+   
+}
