@@ -1,4 +1,5 @@
 import React from 'react'
+import Checkbox from './Form/Checkbox'
 import { Input } from './Form/Input'
 import Radio from './Form/Radio'
 import Select from './Form/Select'
@@ -8,9 +9,15 @@ const App = () => {
   const [email, setEmail] = React.useState('')
   const [produto, setProduto] = React.useState('')
   const [cor, setCor] = React.useState('')
+  const [fruta, setFruta] = React.useState('')
 
   return (
     <form>
+      <Checkbox 
+        options={["Uva", "Manga"]}
+        value={fruta}
+        setValue={setFruta}
+      />
       <Radio 
         options={["Azul", "Vermelho", "Laranja"]}
         value={cor}
