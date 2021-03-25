@@ -8,6 +8,7 @@ const Input = ({ id, label, value, type, onChange, error, onBlur, placeholder}) 
             type={type}
             id={id} 
             name={id} 
+            value={value}
             onChange={onChange}
             onBlur={onBlur}
             placeholder={placeholder}
