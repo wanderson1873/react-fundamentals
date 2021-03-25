@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Input = ({ id, label, setValue, ...props }) => {
+const Input = ({ id, label, setValue, ...props }) => {
    return (
       <>
          <label htmlFor={id}>{label}</label>
@@ -14,3 +14,5 @@ export const Input = ({ id, label, setValue, ...props }) => {
       </>
    )
 }
+
+export default Input
