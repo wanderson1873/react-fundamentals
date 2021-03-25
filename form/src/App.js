@@ -3,7 +3,24 @@ import Input from './Form/Input'
 
 const App = () => {
   const [cep, setCep] = React.useState('')
-  const [error, setErros] = React.useState('')
+  const [error, setError] = React.useState('')
+
+  function validadeCep(value) {
+    if(value.length === 0) {
+      setError('Preencha um valor.')
+      return false
+    } else if(!/^\d{5}-?\d{3}$/.test(value)) {
+      setError('Preencha um cep válido.')
+      return false
+    } else {
+      setError(null)
+      return true
+    }
+  }
+
+  function handleBlur({target}) {
+    validadeCep(target.value)
+  }
  
   return (
     <form>
@@ -12,10 +29,11 @@ const App = () => {
         id="cep" 
         label="CEP" 
         value={cep} 
-        placeholder="0000-000"   
         setValue={setCep}
+        placeholder="0000-000"  
+        onBlur={handleBlur} 
       />
-      {cep}
+      {error && <p>{error}</p>}
     </form>
   )
 }
